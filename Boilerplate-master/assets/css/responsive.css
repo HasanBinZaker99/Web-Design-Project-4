@@ -1,0 +1,31 @@
+/*******************************
+	All Responsive Code
+*******************************/
+@media only screen and (min-width:768px) and (max-width:768px){
+	.header-top .container{
+		min-width:768px;
+	}
+}
+@media only screen and (max-width:787.98px) {
+	.header-top{
+		position:relative;
+	}
+	.header-top,.header-top .container{
+		padding:0;
+		
+	}
+	.content{
+	background:hsl(348, 59%, 54%);	
+	}
+	.top-text{
+		width:100%;
+		padding:0;
+	}
+	.top-text h2{
+		position:absolute;
+		z-index:1000000;
+		left:5%;
+		transform:translateY(19px);
+	}
+
+}

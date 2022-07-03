@@ -1,0 +1,200 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:    Project Name
+Version:    1.0
+Last change:    24/03/17 [fixed Float bug, vf]
+Author Name: Author Name
+Primary use:    Project Type
+-------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Body
+2.
+-------------------------------------------------------------------*/
+
+/*
+==========================================
+    Reset Css
+==========================================
+*/
+:root{
+    --mdark:#616161;
+}
+html,body{
+    font-family: 'Lato',sans-serif;
+
+}
+body{
+    font-family:'Lato',sans-serif;
+    font-size:14px;
+    line-height:1.8;
+    overflow-x:hidden;
+    width:100%;
+}
+ul li{
+    list-style:none;
+}
+h1,h2,h3,h4,h5,h6,ul{
+    margin:0;
+    padding:0;
+}
+/* Header-top */
+.top-text{
+    display:inline-block;
+}
+.top-text h2{
+    font-weight:900;
+    font-size:1.7rem;
+    padding-left:16%;
+}
+@media only screen and (min-width:768px){
+
+.main-menu li{
+    display:inline-block;
+    position:relative;
+}
+.new-border{
+    border:10px solid #bbbbbb;
+    border-radius:1%;
+}
+.main-menu li a{  
+    font-size:1rem;
+    color:var(--mdark);
+    font-weight:600;
+    padding:0 12px;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+.main-menu li a:hover{
+    color:#000;
+}
+.main-menu>li:hover>a,
+.sub_menu>li:hover>a,
+.main-menu li.active a {
+    color: #000;
+}
+ .main-menu>li:last-child a{
+    padding-right:0px;
+    color:#000;
+}
+ul.sub-menu{
+    position:absolute;
+    width:156px;
+    top:39px;
+    opacity:0;
+    visibility:hidden;
+    text-align:left;
+    z-index: 2;
+    background: #f0f0f0;
+    transform:rotateY(37deg) scale(1, 0.7);
+    box-shadow:0 4px 8px #787878;
+}
+.sub-menu li{
+    display:block;
+    color:var(--mdark);
+}
+.sub-menu>li>a{
+    line-height:normal;
+    padding:14px 46px;
+    font-size:13px;
+    display:block;
+    color:(--mdark);
+}
+.sub-menu>li>a::before{
+    content:"\eb81";
+    font-family:icofont;
+    left:0;
+    opacity:0;
+    font-size: 35px;
+    visibility: hidden;
+    position:absolute;
+    padding-left:5px;
+    top:0px;
+}
+.sub-menu a:hover:before{
+    opacity:1;
+    visibility:visible;
+    left:5px;
+}
+.main-menu>li:hover ul.sub-menu{
+    opacity:1;
+    visibility:visible;
+    transform:rotate(0deg);
+    color:#000;
+}
+.main-menu li a,ul.sub-menu,.sub-menu>li>a::before{
+    transition-duration:.5s;
+}
+}
+/* creative Section start */
+.creative-section{
+    width:100%;
+    height: 55vh;
+    padding-top: 5%;
+}
+.creative-section h2{
+    position:relative;
+    color:#fff;
+    font-size:42px;
+    line-height:1.0em;
+    font-weight:500;
+    opacity:0;
+    margin-bottom:10px;
+    transition: all 1000ms ease;
+    transform:translateY(180px);
+    
+}
+.active .creative-section>h2{
+    opacity:1;
+    transform:translateX(0);
+    line-height: 1.8em;
+    transition-delay:1000ms;
+}
+.creative{
+    margin-top:10px;
+    position: relative;
+    
+}
+.creative-section p{
+    color:#fff;
+    font-weight:500;
+    opacity:0;
+    margin-bottom:10px;
+    transition:all 1400ms ease;
+    transform:translateY(180px);
+}
+.active .creative-section>p{
+    opacity:1;
+    transform:translateX(0);
+    transition-delay:1400ms;
+    line-height: 1.8em;
+    font-weight:500;
+    font-size: 22px;
+}
+.ico{
+    display:inline-block;
+    font-size:40px;
+    width:25%;
+    border:2px solid blue;
+    border-radius:50%;
+    background: rgb(0, 153, 255);
+    
+}
+.inner{
+    padding-left: 7%;
+}
+.text{
+    text-align:justify;
+}
+.owl-carousel .owl-item .inner{
+    padding-left:14px;
+    padding-top:0%;
+}
+.owl-carousel .owl-item .ico{
+    height:77px;
+    width:64px;
+}
